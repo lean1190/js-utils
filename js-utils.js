@@ -44,5 +44,12 @@ var utils = utils || (function () {
         return (this.cutLastChar(stringParams)).trim();
     };
 
+    // Returns the extension from a filename, for example exampleImg.png
+    helper.getFileExtension = function (fileName) {
+        var extension = fileName.split('.');
+
+        return extension[extension.length - 1];
+    };
+
     return helper;
 }());
