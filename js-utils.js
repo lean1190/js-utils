@@ -20,8 +20,8 @@ var utils = utils || (function () {
         return (variable === null || typeof variable === "undefined" || variable === {} || this.isEmptyObject(variable) || variable === "");
     };
 
-    // Check if 2 strings are equals
-    helper.isStringEquals = function (firstString, secondString) {
+    // Check if 2 strings are case insensitive equals
+    helper.isStringInsensitiveEquals = function (firstString, secondString) {
         return firstString.toUpperCase() === secondString.toUpperCase();
     };
 
