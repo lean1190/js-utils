@@ -44,11 +44,18 @@ var utils = utils || (function () {
         return (this.cutLastChar(stringParams)).trim();
     };
 
-    // Returns the extension from a filename, for example exampleImg.png
+    // Returns the extension from a filename, e.g. exampleImg.png
     helper.getFileExtension = function (fileName) {
         var extension = fileName.split('.');
 
         return extension[extension.length - 1];
+    };
+
+    // Returns the filename from a full path url, e.g /resources/images/thatimage.png
+    helper.getFileNameFromPath = function (filePath) {
+        var splitResult = filePath.split("/");
+
+        return splitResult[splitResult.length - 1];
     };
 
     return helper;
